@@ -1,15 +1,11 @@
 language: python
 python:
-  - "2.7"
-
+- '2.7'
 branches:
   only:
-    - master
-
+  - master
 env:
-  - AIT_CONFIG: ${TRAVIS_BUILD_DIR}/data/config/config.yaml
-
+- AIT_CONFIG: "${TRAVIS_BUILD_DIR}/data/config/config.yaml"
 install:
-  - pip install .[tests]
-
+- pip install .[tests]
 script: nosetests
